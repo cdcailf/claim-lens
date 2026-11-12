@@ -1,0 +1,45 @@
+{
+  "policyNo": "CTXP-2026-0002",
+  "product": "燃油车延保 B",
+  "status": "active",
+  "insured": {
+    "name": "示例车主",
+    "vehicle": {
+      "vin": "LFV3A23C7M3123456",
+      "brand": "远川",
+      "model": "T6",
+      "purchasePrice": 185000
+    }
+  },
+  "period": { "start": "2026-03-01", "end": "2028-03-01" },
+  "mileageLimit": 80000,
+  "waitingDays": 30,
+  "deductible": 300,
+  "perClaimLimit": 30000,
+  "annualLimit": 60000,
+  "annualUsed": 0,
+  "manualReviewThreshold": 15000,
+  "requireAttachments": true,
+  "coverage": [
+    { "code": "B1", "name": "发动机", "covered": true, "clauseId": "CL-B1" },
+    { "code": "B2", "name": "变速箱", "covered": true, "clauseId": "CL-B2" },
+    { "code": "B3", "name": "底盘", "covered": true, "clauseId": "CL-B3" },
+    { "code": "B4", "name": "电气系统", "covered": true, "clauseId": "CL-B4" }
+  ],
+  "exclusions": [
+    { "code": "EX-01", "keywords": ["营运", "网约车", "出租"], "clauseId": "CL-EX-01" },
+    { "code": "EX-03", "keywords": ["自然磨损", "老化", "保养不当", "未保养"], "clauseId": "CL-EX-03" },
+    { "code": "EX-04", "keywords": ["改装", "刷写程序", "非原厂"], "clauseId": "CL-EX-04" }
+  ],
+  "clauses": {
+    "CL-B1": "保障发动机缸体、缸盖、曲轴、连杆、活塞等内部机械部件因润滑或冷却故障导致的损坏。",
+    "CL-B2": "保障自动变速箱阀体、离合器片、行星齿轮机构等内部机械与液压故障。",
+    "CL-B3": "保障悬挂、转向、制动系统非易损件的机械故障。",
+    "CL-B4": "保障发电机、起动机、车身控制模块等电气部件故障。",
+    "CL-EX-01": "营运、网约车、租赁用途车辆不在保障范围。",
+    "CL-EX-03": "自然磨损、老化、保养不当导致的损失不予赔付。",
+    "CL-EX-04": "改装或使用非原厂配件导致的故障不予赔付。",
+    "CL-LIMIT": "单次赔付不超过单次限额，年度累计不超过年度限额。",
+    "CL-DEDUCT": "每次赔付扣除保单约定的免赔额。"
+  }
+}

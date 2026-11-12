@@ -1,0 +1,45 @@
+{
+  "policyNo": "CTXP-2026-0001",
+  "product": "新能源整车延保 A",
+  "status": "active",
+  "insured": {
+    "name": "示例车主",
+    "vehicle": {
+      "vin": "LSVAA4182E2123456",
+      "brand": "星驰",
+      "model": "X5",
+      "purchasePrice": 380000
+    }
+  },
+  "period": { "start": "2026-01-01", "end": "2029-01-01" },
+  "mileageLimit": 100000,
+  "waitingDays": 0,
+  "deductible": 500,
+  "perClaimLimit": 50000,
+  "annualLimit": 100000,
+  "annualUsed": 0,
+  "manualReviewThreshold": 20000,
+  "requireAttachments": true,
+  "coverage": [
+    { "code": "A1", "name": "三电系统", "covered": true, "clauseId": "CL-A1" },
+    { "code": "A2", "name": "电控系统", "covered": true, "clauseId": "CL-A2" },
+    { "code": "A3", "name": "车身结构件", "covered": true, "clauseId": "CL-A3" }
+  ],
+  "exclusions": [
+    { "code": "EX-01", "keywords": ["营运", "网约车", "出租", "滴滴"], "clauseId": "CL-EX-01" },
+    { "code": "EX-02", "keywords": ["酒驾", "醉驾", "逃逸", "毒驾"], "clauseId": "CL-EX-02" },
+    { "code": "EX-03", "keywords": ["自然磨损", "老化", "保养不当", "未保养"], "clauseId": "CL-EX-03" },
+    { "code": "EX-04", "keywords": ["改装", "刷写程序", "非原厂"], "clauseId": "CL-EX-04" }
+  ],
+  "clauses": {
+    "CL-A1": "保障动力电池、驱动电机及其控制器在正常使用过程中发生的机械或电气故障，含材料费与工时费。",
+    "CL-A2": "保障整车控制器、电机控制器、车载充电机等电控部件的突发故障。",
+    "CL-A3": "保障承载式车身结构件因非事故原因产生的开裂、变形。",
+    "CL-EX-01": "用于营运、网约车、租赁或出租用途的车辆，不属于本保单保障范围。",
+    "CL-EX-02": "因酒驾、醉驾、毒驾、事故逃逸等违法行为导致的损失，不予赔付。",
+    "CL-EX-03": "自然磨损、老化、腐蚀、保养不当或未按厂家要求保养导致的损失，不予赔付。",
+    "CL-EX-04": "车辆改装、刷写非原厂程序或使用非原厂配件导致的故障，不予赔付。",
+    "CL-LIMIT": "单次赔付以核定损失的 100% 为上限，扣除免赔额后不超过单次限额；年度累计不超过年度限额。",
+    "CL-DEDUCT": "每次赔付扣除保单约定的免赔额。"
+  }
+}

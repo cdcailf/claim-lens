@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim Lens · CLM-2026-0001</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 18px; background: #f6f8fa; color: #1f2328; font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .card { background: #fff; border: 1px solid #d8dee4; border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; }
+  .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  .muted { color: #656d76; font-size: 12px; }
+  .decision { display: inline-block; padding: 4px 12px; border-radius: 999px; color: #0f9d58; background: #0f9d5814; font-weight: 700; }
+  .amounts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+  .amount { background: #f6f8fa; border-radius: 8px; padding: 10px 12px; }
+  .amount b { display: block; font-size: 18px; }
+  .amount span { color: #656d76; font-size: 12px; }
+  h2 { font-size: 14px; margin: 0 0 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eaeef2; vertical-align: top; }
+  th { color: #656d76; font-weight: 600; background: #f6f8fa; }
+  .badge { padding: 1px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 4px 0; }
+  .reason-error { color: #d93025; }
+  .reason-warn { color: #9a6700; }
+  blockquote { margin: 0 0 10px; padding: 10px 12px; background: #f6f8fa; border-left: 3px solid #d0d7de; border-radius: 0 6px 6px 0; }
+  .clause-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #656d76; margin-bottom: 2px; }
+  .foot { text-align: center; color: #8c959f; font-size: 12px; margin-top: 18px; }
+  @media (max-width: 640px) { .amounts { grid-template-columns: repeat(2, 1fr); } }
+  @media print { body { background: #fff; padding: 0; } .card { border: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="top">
+      <div>
+        <h1>CLM-2026-0001</h1>
+        <div class="muted">保单 CTXP-2026-0001 · 新能源整车延保 A · 置信度 97%</div>
+      </div>
+      <div class="decision">可赔付</div>
+    </div>
+    <div class="amounts">
+      <div class="amount"><b>¥9,800.00</b><span>报损金额</span></div>
+      <div class="amount"><b>¥9,800.00</b><span>保障内金额</span></div>
+      <div class="amount"><b>¥500.00</b><span>免赔额</span></div>
+      <div class="amount"><b>¥9,300.00</b><span>可赔金额</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>受损项目</h2><table><thead><tr><th>项目</th><th>类别</th><th>工时</th><th>材料</th><th>保障</th><th>金额</th></tr></thead><tbody>
+    <tr>
+      <td>动力电池模组</td>
+      <td>三电系统</td>
+      <td>¥1,200.00</td>
+      <td>¥8,600.00</td>
+      <td>保障内</td>
+      <td>¥9,800.00</td>
+    </tr></tbody></table></div>
+
+  <div class="card">
+    <h2>检查项</h2>
+    <table><thead><tr><th>检查</th><th>结果</th><th>说明</th></tr></thead><tbody>
+    <tr>
+      <td>保单匹配</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>CTXP-2026-0001</td>
+    </tr>
+    <tr>
+      <td>保单有效</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>active</td>
+    </tr>
+    <tr>
+      <td>保障期</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>2026-01-01 ~ 2029-01-01</td>
+    </tr>
+    <tr>
+      <td>等待期</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>无等待期</td>
+    </tr>
+    <tr>
+      <td>承保里程</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>42000 / 100000 km</td>
+    </tr>
+    <tr>
+      <td>责任免除</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>未命中免责条款</td>
+    </tr>
+    <tr>
+      <td>保障范围</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>1 项均在保障范围</td>
+    </tr>
+    <tr>
+      <td>赔付金额</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>核定损失 9800，免赔额 500，可赔 9300</td>
+    </tr>
+    <tr>
+      <td>材料完整性</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>2 份材料</td>
+    </tr>
+    <tr>
+      <td>人工复核</td>
+      <td><span class="badge" style="background:#0f9d581a;color:#0f9d58">通过</span></td>
+      <td>无需人工复核</td>
+    </tr></tbody></table>
+  </div>
+
+  
+  <div class="card"><h2>条款依据</h2>
+    <blockquote>
+      <div class="clause-id">CL-A1</div>
+      <div>保障动力电池、驱动电机及其控制器在正常使用过程中发生的机械或电气故障，含材料费与工时费。</div>
+    </blockquote>
+    <blockquote>
+      <div class="clause-id">CL-DEDUCT</div>
+      <div>每次赔付扣除保单约定的免赔额。</div>
+    </blockquote></div>
+
+  <div class="foot">Generated by Claim Lens · rules-first, clause-cited claim adjudication</div>
+</div>
+</body>
+</html>

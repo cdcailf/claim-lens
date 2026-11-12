@@ -1,0 +1,13 @@
+{
+  "claimNo": "CLM-2026-0005",
+  "policyNo": "CTXP-2026-0001",
+  "incidentAt": "2026-08-15",
+  "mileage": 60000,
+  "type": "repair",
+  "description": "车辆中控屏幕偶发黑屏，检查为电控模块接触不良，维修工时费 300 元。",
+  "attachments": ["invoice.jpg"],
+  "priorClaims": 2,
+  "damageItems": [
+    { "part": "电控模块线束", "category": "电控系统", "labor": 300, "parts": 0 }
+  ]
+}

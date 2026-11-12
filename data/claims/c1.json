@@ -1,0 +1,13 @@
+{
+  "claimNo": "CLM-2026-0001",
+  "policyNo": "CTXP-2026-0001",
+  "incidentAt": "2026-06-01",
+  "mileage": 42000,
+  "type": "repair",
+  "description": "车辆在高速行驶中动力电池报警，随后动力中断，拖车至授权服务中心检查，确认电池模组内部故障。",
+  "attachments": ["service-order.jpg", "invoice.jpg"],
+  "priorClaims": 0,
+  "damageItems": [
+    { "part": "动力电池模组", "category": "三电系统", "labor": 1200, "parts": 8600 }
+  ]
+}

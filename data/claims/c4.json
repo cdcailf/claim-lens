@@ -1,0 +1,14 @@
+{
+  "claimNo": "CLM-2026-0004",
+  "policyNo": "CTXP-2026-0001",
+  "incidentAt": "2026-07-10",
+  "mileage": 51000,
+  "type": "repair",
+  "description": "车辆底盘托底后检查，动力电池外壳轻微变形，同时右前轮胎鼓包，申请一并更换。",
+  "attachments": ["inspection.jpg"],
+  "priorClaims": 0,
+  "damageItems": [
+    { "part": "动力电池外壳", "category": "三电系统", "labor": 800, "parts": 5200 },
+    { "part": "右前轮胎", "category": "轮胎", "labor": 0, "parts": 800 }
+  ]
+}

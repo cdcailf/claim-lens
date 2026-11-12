@@ -1,0 +1,13 @@
+{
+  "claimNo": "CLM-2026-0006",
+  "policyNo": "CTXP-2026-0001",
+  "incidentAt": "2026-10-01",
+  "mileage": 68000,
+  "type": "repair",
+  "description": "车辆动力电池整包故障，授权服务中心建议更换整包，报价包含电池总成与工时。",
+  "attachments": ["diagnosis.pdf", "quote.pdf", "photos.zip"],
+  "priorClaims": 0,
+  "damageItems": [
+    { "part": "动力电池总成", "category": "三电系统", "labor": 3000, "parts": 45000 }
+  ]
+}

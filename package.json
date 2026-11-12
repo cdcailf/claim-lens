@@ -1,0 +1,38 @@
+{
+  "name": "claim-lens",
+  "version": "0.1.0",
+  "description": "Rules-first, clause-cited claim adjudication sandbox for warranty and insurance",
+  "type": "module",
+  "bin": {
+    "claim-lens": "./bin/cli.js"
+  },
+  "exports": {
+    ".": "./src/assess.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "README.md",
+    "README_ZH.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "eval": "node bin/cli.js eval",
+    "demo": "node bin/cli.js assess --policy data/policies/p1.json --claim data/claims/c1.json --html examples/report.html"
+  },
+  "keywords": [
+    "insurance",
+    "claims",
+    "warranty",
+    "agent",
+    "llm",
+    "rules-engine",
+    "insurtech"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

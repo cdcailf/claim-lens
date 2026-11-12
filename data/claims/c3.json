@@ -1,0 +1,13 @@
+{
+  "claimNo": "CLM-2026-0003",
+  "policyNo": "CTXP-2026-0003",
+  "incidentAt": "2026-09-01",
+  "mileage": 52000,
+  "type": "repair",
+  "description": "车辆后空气悬架塌陷，检查为气囊漏气、压缩机过热保护，需更换气囊及压缩机。",
+  "attachments": ["inspection.jpg", "quote.pdf"],
+  "priorClaims": 1,
+  "damageItems": [
+    { "part": "空气悬架气囊与压缩机", "category": "空气悬架", "labor": 2500, "parts": 12500 }
+  ]
+}

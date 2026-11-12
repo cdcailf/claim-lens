@@ -1,0 +1,13 @@
+{
+  "claimNo": "CLM-2026-0002",
+  "policyNo": "CTXP-2026-0002",
+  "incidentAt": "2026-08-01",
+  "mileage": 36000,
+  "type": "repair",
+  "description": "车辆行驶中变速箱换挡顿挫并出现异响，拆检发现阀体磨损，需更换阀体总成。",
+  "attachments": ["diagnosis.pdf", "invoice.jpg"],
+  "priorClaims": 0,
+  "damageItems": [
+    { "part": "变速箱阀体", "category": "变速箱", "labor": 1800, "parts": 7200 }
+  ]
+}

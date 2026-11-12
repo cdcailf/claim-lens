@@ -1,0 +1,41 @@
+{
+  "policyNo": "CTXP-2026-0003",
+  "product": "豪华车保障 C",
+  "status": "active",
+  "insured": {
+    "name": "示例企业",
+    "vehicle": {
+      "vin": "WDDWF4KB0FR123456",
+      "brand": "星驰",
+      "model": "S级",
+      "purchasePrice": 980000
+    }
+  },
+  "period": { "start": "2026-02-01", "end": "2029-02-01" },
+  "mileageLimit": 150000,
+  "waitingDays": 0,
+  "deductible": 1000,
+  "perClaimLimit": 80000,
+  "annualLimit": 150000,
+  "annualUsed": 0,
+  "manualReviewThreshold": 30000,
+  "requireAttachments": true,
+  "coverage": [
+    { "code": "C1", "name": "发动机", "covered": true, "clauseId": "CL-C1" },
+    { "code": "C2", "name": "变速箱", "covered": true, "clauseId": "CL-C2" },
+    { "code": "C3", "name": "空气悬架", "covered": true, "clauseId": "CL-C3" }
+  ],
+  "exclusions": [
+    { "code": "EX-02", "keywords": ["酒驾", "醉驾", "逃逸", "毒驾"], "clauseId": "CL-EX-02" },
+    { "code": "EX-03", "keywords": ["自然磨损", "老化", "保养不当"], "clauseId": "CL-EX-03" }
+  ],
+  "clauses": {
+    "CL-C1": "保障发动机内部机械部件因非事故原因产生的故障。",
+    "CL-C2": "保障变速箱内部机械、液压与电控单元故障。",
+    "CL-C3": "保障空气悬架压缩机、气囊、高度传感器故障，不含正常老化。",
+    "CL-EX-02": "酒驾、醉驾、毒驾、事故逃逸导致的损失不予赔付。",
+    "CL-EX-03": "自然磨损、老化、保养不当导致的损失不予赔付。",
+    "CL-LIMIT": "单次赔付不超过单次限额，年度累计不超过年度限额。",
+    "CL-DEDUCT": "每次赔付扣除保单约定的免赔额。"
+  }
+}

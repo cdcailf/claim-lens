@@ -4,6 +4,8 @@
 
 Most "AI claims" demos are a chat box that guesses. Claim Lens is the opposite: deterministic checks run first, every decision points to the exact policy clause, and the same JSON is returned in CLI, library, and report form. An LLM can explain the result, but it cannot silently change it.
 
+![Claim Lens terminal demo](docs/demo.gif)
+
 ![Claim Lens report](docs/report.png)
 
 Want to record a 30-second demo? See [docs/demo-script.md](docs/demo-script.md).

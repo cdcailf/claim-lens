@@ -1,5 +1,14 @@
 # Claim Lens · 30 秒演示脚本
 
+已生成终端 GIF：`docs/demo.gif`。重新录制：
+
+```bash
+./scripts/record-demo.sh          # 人工录制时
+asciinema rec -y --overwrite --cols 100 --rows 30 \
+  -c "bash scripts/record-demo.sh" demo.cast
+agg --font-size 18 --theme monokai --font-family "Menlo,PingFang SC" demo.cast docs/demo.gif
+```
+
 ## 版本 A：中文（微信群 / 即刻 / 视频号）
 
 | 时间 | 画面 | 旁白 |

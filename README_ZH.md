@@ -4,6 +4,8 @@
 
 大多数「AI 理赔」演示是一个会猜的聊天框。Claim Lens 反过来：先跑确定性规则，每个结论都指向具体条款，CLI、库、报告返回同一份 JSON。LLM 可以写解释，但不能偷偷改结论。
 
+![Claim Lens 终端演示](docs/demo.gif)
+
 ![Claim Lens 报告](docs/report.png)
 
 ```bash

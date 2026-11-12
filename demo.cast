@@ -1,0 +1,8 @@
+{"version": 2, "width": 100, "height": 30, "timestamp": 1794485381, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[0.01568, "o", "\u001b[3J\u001b[H\u001b[2J"]
+[0.016683, "o", "\u001b[1;36mClaim Lens\u001b[0m  rules-first claim adjudication\r\n\r\n"]
+[1.04482, "o", "\u001b[1;37m$ node bin/cli.js assess --policy data/policies/p1.json --claim data/claims/c1.json\u001b[0m\r\n"]
+[2.143094, "o", "Claim Lens · CLM-2026-0001\r\n保单 CTXP-2026-0001 · 新能源整车延保 A\r\n\r\n结论：可赔付\r\n报损 ¥9,800.00 · 保障内 ¥9,800.00 · 免赔 ¥500.00 · 可赔 ¥9,300.00\r\n置信度 97%\r\n\r\n检查项\r\n  ✓ 保单匹配：CTXP-2026-0001\r\n  ✓ 保单有效：active\r\n  ✓ 保障期：2026-01-01 ~ 2029-01-01\r\n  ✓ 等待期：无等待期\r\n  ✓ 承保里程：42000 / 100000 km\r\n  ✓ 责任免除：未命中免责条款\r\n  ✓ 保障范围：1 项均在保障范围\r\n  ✓ 赔付金额：核定损失 9800，免赔额 500，可赔 9300\r\n  ✓ 材料完整性：2 份材料\r\n  ✓ 人工复核：无需人工复核\r\n\r\n条款依据\r\n  CL-A1：保障动力电池、驱动电机及其控制器在正常使用过程中发生的机械或电气故障，含材料费与工时费。\r\n  CL-DEDUCT：每次赔付扣除保单约定的免赔额。\r\n"]
+[7.167382, "o", "\r\n\u001b[1;37m$ node bin/cli.js eval | head -1\u001b[0m\r\n"]
+[8.245128, "o", "Claim Lens eval · 20/20 passed · accuracy 100%\r\n"]
+[11.261731, "o", "\r\n\u001b[1;32mgithub.com/cdcailf/claim-lens\u001b[0m  ·  MIT\r\n"]

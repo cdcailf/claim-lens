@@ -6,6 +6,8 @@ Most "AI claims" demos are a chat box that guesses. Claim Lens is the opposite: 
 
 ![Claim Lens report](docs/report.png)
 
+Want to record a 30-second demo? See [docs/demo-script.md](docs/demo-script.md).
+
 ```bash
 node bin/cli.js assess --policy data/policies/p1.json --claim data/claims/c1.json
 ```

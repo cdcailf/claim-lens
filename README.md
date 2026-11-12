@@ -41,11 +41,12 @@ Insurance agents and warranty platforms are adding LLM claim assistants, but a p
 
 ## Quick start
 
-Requires Node.js 18+.
+Requires Node.js 18+. The core rules engine has no dependencies; install once for PDF import and the MCP server.
 
 ```bash
 git clone https://github.com/cdcailf/claim-lens.git
 cd claim-lens
+npm install
 
 node bin/cli.js list
 node bin/cli.js assess \
@@ -57,7 +58,7 @@ node bin/cli.js eval
 node --test tests/*.test.js
 ```
 
-No install step, no build step, no database. The core is plain ESM.
+No build step, no database.
 
 ## Eval
 
@@ -95,6 +96,51 @@ Checks are ordered from hard stops to soft signals:
 10. manual-review triggers
 
 Decision values: `approved`, `partial`, `rejected`, `manual_review`.
+
+## PDF import
+
+Digital PDFs can be turned into a draft policy JSON. Scanned PDFs need OCR and are not supported.
+
+```bash
+node bin/cli.js import \
+  --pdf examples/policy-sample.pdf \
+  --out data/policies/imported.json
+```
+
+The importer extracts policy number, period, mileage, deductible, per-claim/annual limits, coverage categories, exclusions, and `第X条` clause text. It always writes a draft plus warnings — review the coverage and exclusion lists before using it for real decisions.
+
+`examples/policy-sample.pdf` is a synthetic one-page policy used by the tests.
+
+## MCP server
+
+Claim Lens is agent-native: expose `list_policies`, `get_policy`, `assess_claim`, and `explain_claim` over MCP stdio.
+
+Claude Code:
+
+```bash
+claude mcp add claim-lens -- node /absolute/path/to/claim-lens/bin/cli.js mcp
+```
+
+Claude Desktop / Cursor:
+
+```json
+{
+  "mcpServers": {
+    "claim-lens": {
+      "command": "node",
+      "args": ["/absolute/path/to/claim-lens/bin/cli.js", "mcp"]
+    }
+  }
+}
+```
+
+Then an agent can do:
+
+```text
+Assess CLM-2026-0001 against CTXP-2026-0001 and explain the decision.
+```
+
+The MCP tools return the same JSON as the CLI. The agent gets the decision, amounts, checks, and clause citations — not a free-form guess.
 
 ## Use as a library
 
@@ -157,8 +203,7 @@ All sample data is synthetic. Do not put real customer data in this repository.
 
 ## Roadmap
 
-- PDF policy ingestion with clause segmentation
-- MCP server so Claude Code / Codex / Cursor can call `assess_claim`
+- OCR for scanned policy PDFs
 - Configurable rule packs per product line
 - Historical claim deduplication and fraud signals
 - More languages in the rule pack

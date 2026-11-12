@@ -39,6 +39,8 @@ function usage() {
 
 Usage:
   claim-lens assess --policy data/policies/p1.json --claim data/claims/c1.json [--json] [--html out.html] [--explain]
+  claim-lens import --pdf policy.pdf [--out data/policies/imported.json]
+  claim-lens mcp
   claim-lens eval [--json]
   claim-lens list
 
@@ -75,6 +77,35 @@ async function main() {
 
   if (command === 'list') {
     listData();
+    return;
+  }
+
+  if (command === 'mcp') {
+    const { startMcpServer } = await import('../src/mcp.js');
+    await startMcpServer();
+    return;
+  }
+
+  if (command === 'import') {
+    if (!options.pdf) {
+      console.error('Missing --pdf');
+      process.exitCode = 1;
+      return;
+    }
+    const { importPolicyFromPdf } = await import('../src/pdf.js');
+    const result = await importPolicyFromPdf(options.pdf);
+    const out = path.resolve(options.out === true || !options.out ? 'policy.imported.json' : options.out);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, JSON.stringify(result.policy, null, 2));
+    console.log(`Pages: ${result.totalPages}`);
+    console.log(`Policy: ${result.policy.policyNo} · ${result.policy.product}`);
+    console.log(`Coverage: ${result.policy.coverage.map((item) => item.name).join('、') || '(none)'}`);
+    console.log(`Clauses: ${Object.keys(result.policy.clauses).length}`);
+    if (result.warnings.length) {
+      console.log('\nNeeds review:');
+      for (const warning of result.warnings) console.log(`  - ${warning}`);
+    }
+    console.log(`\nDraft written to ${out}`);
     return;
   }
 

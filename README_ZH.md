@@ -37,11 +37,12 @@ node bin/cli.js assess --policy data/policies/p1.json --claim data/claims/c1.jso
 
 ## 快速开始
 
-需要 Node.js 18+。
+需要 Node.js 18+。核心规则引擎零依赖；PDF 导入和 MCP 需要先安装依赖。
 
 ```bash
 git clone https://github.com/cdcailf/claim-lens.git
 cd claim-lens
+npm install
 
 node bin/cli.js list
 node bin/cli.js assess \
@@ -53,7 +54,7 @@ node bin/cli.js eval
 node --test tests/*.test.js
 ```
 
-不需要安装、不需要构建、不需要数据库。
+不需要构建、不需要数据库。
 
 ## 评测
 
@@ -78,6 +79,41 @@ claim.json ──┘                │
 ```
 
 结论值：`approved`、`partial`、`rejected`、`manual_review`。
+
+## PDF 导入
+
+支持数字版 PDF，扫描件需要 OCR，暂不支持。
+
+```bash
+node bin/cli.js import \
+  --pdf examples/policy-sample.pdf \
+  --out data/policies/imported.json
+```
+
+会提取保单号、保障期间、里程、免赔额、单次/年度限额、保障类别、免责关键词和 `第X条` 条款原文，并输出待复核提示。生成的是草稿，正式使用前请核对保障与免责清单。
+
+## MCP Server
+
+把 `list_policies`、`get_policy`、`assess_claim`、`explain_claim` 暴露给 Claude Code / Codex / Cursor。
+
+```bash
+claude mcp add claim-lens -- node /绝对路径/claim-lens/bin/cli.js mcp
+```
+
+Claude Desktop / Cursor 配置：
+
+```json
+{
+  "mcpServers": {
+    "claim-lens": {
+      "command": "node",
+      "args": ["/绝对路径/claim-lens/bin/cli.js", "mcp"]
+    }
+  }
+}
+```
+
+Agent 可以直接问「用 CTXP-2026-0001 评估这个理赔并解释」，拿到的是带条款引用的结构化结论，不是自由发挥。
 
 ## 作为库使用
 

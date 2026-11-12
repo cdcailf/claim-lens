@@ -1,6 +1,6 @@
 {
   "name": "claim-lens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Rules-first, clause-cited claim adjudication sandbox for warranty and insurance",
   "type": "module",
   "bin": {
@@ -34,5 +34,10 @@
   "engines": {
     "node": ">=18"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "unpdf": "^1.7.0",
+    "zod": "^4.6.7"
+  }
 }

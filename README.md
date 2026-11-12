@@ -41,7 +41,7 @@ Insurance agents and warranty platforms are adding LLM claim assistants, but a p
 
 ## Quick start
 
-Requires Node.js 18+. The core rules engine has no dependencies; install once for PDF import and the MCP server.
+Requires Node.js 20+. The core rules engine has no dependencies; install once for PDF import and the MCP server.
 
 ```bash
 git clone https://github.com/cdcailf/claim-lens.git

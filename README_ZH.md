@@ -37,7 +37,7 @@ node bin/cli.js assess --policy data/policies/p1.json --claim data/claims/c1.jso
 
 ## 快速开始
 
-需要 Node.js 18+。核心规则引擎零依赖；PDF 导入和 MCP 需要先安装依赖。
+需要 Node.js 20+。核心规则引擎零依赖；PDF 导入和 MCP 需要先安装依赖。
 
 ```bash
 git clone https://github.com/cdcailf/claim-lens.git
